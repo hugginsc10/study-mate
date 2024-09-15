@@ -1,12 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { StudyScreenRouteProp } from '../types';
+import { StudyScreenProps } from '../types';
 
-type Props = {
-  route: StudyScreenRouteProp;
-};
-
-const StudyScreen: React.FC<Props> = ({ route }) => {
+const StudyScreen: React.FC<StudyScreenProps> = ({ route }) => {
   const { deckId } = route.params;
 
   return (

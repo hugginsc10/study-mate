@@ -1,15 +1,11 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
-import { HomeScreenNavigationProp } from '../types';
+import { HomeScreenProps } from '../types';
 
-type Props = {
-  navigation: HomeScreenNavigationProp;
-};
-
-const HomeScreen: React.FC<Props> = ({ navigation }) => {
+const HomeScreen: React.FC<HomeScreenProps> = ({ navigation }) => {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome to Study Mate!</Text>
+      <Text style={styles.title}>Welcome to Flashcards!</Text>
       <Button
         title="Go to Deck"
         onPress={() => navigation.navigate('Deck', { deckId: '1' })}

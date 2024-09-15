@@ -21,16 +21,16 @@ from models import User, Deck, Flashcard, Tag, Progress
 
 
 from api.auth import auth_bp
-from api.decks import decks_bp
-from api.flashcards import flashcards_bp
-from api.tags import tags_bp
-from api.progress import progress_bp
+# from api.decks import decks_bp
+# from api.flashcards import flashcards_bp
+# from api.tags import tags_bp
+# from api.progress import progress_bp
 
 app.register_blueprint(auth_bp, url_prefix='/api/auth')
-app.register_blueprint(decks_bp, url_prefix='/api/decks')
-app.register_blueprint(flashcards_bp, url_prefix='/api/flashcards')
-app.register_blueprint(tags_bp, url_prefix='/api/tags')
-app.register_blueprint(progress_bp, url_prefix='/api/progress')
+# app.register_blueprint(decks_bp, url_prefix='/api/decks')
+# app.register_blueprint(flashcards_bp, url_prefix='/api/flashcards')
+# app.register_blueprint(tags_bp, url_prefix='/api/tags')
+# app.register_blueprint(progress_bp, url_prefix='/api/progress')
 
 @app.route('/')
 def hello_world():

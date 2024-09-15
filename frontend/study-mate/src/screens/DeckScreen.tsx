@@ -1,13 +1,8 @@
 import React from 'react';
 import { StyleSheet, Text, View, Button } from 'react-native';
-import { DeckScreenNavigationProp, DeckScreenRouteProp } from '../types';
+import { DeckScreenProps } from '../types';
 
-type Props = {
-  navigation: DeckScreenNavigationProp;
-  route: DeckScreenRouteProp;
-};
-
-const DeckScreen: React.FC<Props> = ({ navigation, route }) => {
+const DeckScreen: React.FC<DeckScreenProps> = ({ navigation, route }) => {
   const { deckId } = route.params;
 
   return (

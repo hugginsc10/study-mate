@@ -1,5 +1,5 @@
-import { StackNavigationProp } from '@react-navigation/stack';
-import { RouteProp } from '@react-navigation/native';
+import { NavigatorScreenParams } from '@react-navigation/native';
+import { StackScreenProps } from '@react-navigation/stack';
 
 export type RootStackParamList = {
   Home: undefined;
@@ -7,9 +7,8 @@ export type RootStackParamList = {
   Study: { deckId: string };
 };
 
-export type HomeScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Home'>;
+export type RootStackScreenProps<T extends keyof RootStackParamList> = StackScreenProps<RootStackParamList, T>;
 
-export type DeckScreenNavigationProp = StackNavigationProp<RootStackParamList, 'Deck'>;
-export type DeckScreenRouteProp = RouteProp<RootStackParamList, 'Deck'>;
-
-export type StudyScreenRouteProp = RouteProp<RootStackParamList, 'Study'>;
+export type HomeScreenProps = RootStackScreenProps<'Home'>;
+export type DeckScreenProps = RootStackScreenProps<'Deck'>;
+export type StudyScreenProps = RootStackScreenProps<'Study'>;
